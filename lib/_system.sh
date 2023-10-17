@@ -186,7 +186,8 @@ system_certbot_install() {
 
   sudo su - root <<EOF
   snap install --classic certbot
-  apt update
+  apt update -y
+  certbot --nginx
 EOF
 
   sleep 10
